@@ -27,10 +27,15 @@ const productsSlice = createSlice({
     setError: (state, action: PayloadAction<string>) => {
       state.error = action.payload;
     },
+    setProduct: (state, action: PayloadAction<Product>) => {
+      const product = action.payload;
+
+      state.items = state.items.map((item) => (item.id === product.id ? product : item));
+    },
   },
 });
 
-export const { setProducts, setLoading, setError } = productsSlice.actions;
+export const { setProducts, setLoading, setError, setProduct } = productsSlice.actions;
 
 export const selectProducts = (store: RootState) => store.products;
 export const selectProduct = (productId: number) => (store: RootState) =>

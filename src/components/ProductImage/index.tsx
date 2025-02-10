@@ -19,8 +19,7 @@ export default function ProductImage({
   const isOutOfStock = productStatus === ProductStatus.OutOfStack;
 
   return (
-    <div
-      className={`basis-[500px] h-[700px] relative bg-white rounded-xl overflow-hidden ${wrapperClassname}`}>
+    <div className={`relative bg-white rounded-xl overflow-hidden ${wrapperClassname}`}>
       <Image
         fill
         src={src}

@@ -6,7 +6,7 @@ export interface ButtonProps extends React.ComponentProps<"button"> {
   className?: string;
 }
 
-export default function Button({ href, className, children }: ButtonProps) {
+export default function Button({ href, className, children, ...props }: ButtonProps) {
   const baseStyles =
     "inline-block px-6 py-3 bg-white text-black rounded-xl transition-transform hover:scale-105";
 
@@ -18,5 +18,9 @@ export default function Button({ href, className, children }: ButtonProps) {
     );
   }
 
-  return <button className={`${baseStyles} ${className}`}>{children}</button>;
+  return (
+    <button className={`${baseStyles} ${className}`} {...props}>
+      {children}
+    </button>
+  );
 }

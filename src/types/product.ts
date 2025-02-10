@@ -1,4 +1,4 @@
-import { ProductCategory, ProductStatus, UnitEnum } from "./productFields";
+import { ProductStatus, UnitEnum } from "./productFields";
 
 export interface Product {
   id: number;
@@ -10,7 +10,7 @@ export interface Product {
   discountPrice?: number;
   status: ProductStatus;
   unitType: UnitEnum;
-  category: ProductCategory;
+  category: string;
 }
 
 export type ProductList = Product[];
