@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-br from-cyan-900 to-cyan-950">
+    <div className="h-screen flex items-center justify-center">
       <div className="text-white text-center">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
