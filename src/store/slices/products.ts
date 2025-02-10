@@ -33,5 +33,7 @@ const productsSlice = createSlice({
 export const { setProducts, setLoading, setError } = productsSlice.actions;
 
 export const selectProducts = (store: RootState) => store.products;
+export const selectProduct = (productId: number) => (store: RootState) =>
+  store.products.items.find((item) => item.id === productId);
 
 export default productsSlice.reducer;
