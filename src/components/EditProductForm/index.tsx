@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { Product } from "@app/types/product";
 import { validationSchema } from "./validationSchema";
 import Image from "next/image";
+import LoadingSpinner from "../LoadingSpinner";
 
 export interface EditProductFormProps {
   productId: number;
@@ -60,18 +61,18 @@ export default function EditProductForm({ productId }: EditProductFormProps) {
     }
   };
 
-  if (!product) return <div>Loading...</div>;
+  if (!product) return <LoadingSpinner />;
 
   return (
     <div className="container mx-auto py-12 text-white">
       <Button href={`/products/${productId}`} className="mb-4">
         Go back to product details
       </Button>
-      <div className="flex gap-10">
+      <div className="flex flex-col gap-10 lg:flex-row">
         <div>
-          <div className="relative overflow-hidden rounded-xl shrink-0 w-[500px] h-[700px] mb-4">
+          <div className="relative overflow-hidden rounded-xl shrink-0  mb-4 w-full  h-[300px] md:h-[500px] lg:w-[500px] lg:h-[700px]">
             {formik.values.imageSrc && (
-              <Image fill src={formik.values.imageSrc} className="object-cover" alt={product.name} />
+              <Image fill src={formik.values.imageSrc} className="object-cover " alt={product.name} />
             )}
           </div>
           <Input className="mt-4" label="Choose image" name="imageSrc" type="file" onChange={onChangeImage} />

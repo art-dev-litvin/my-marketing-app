@@ -7,6 +7,7 @@ import React from "react";
 import ProductImage from "@app/components/ProductImage";
 import Button from "@app/components/Button";
 import Price from "../Price";
+import LoadingSpinner from "../LoadingSpinner";
 
 interface ProductDetailsProps {
   productId: number;
@@ -17,16 +18,21 @@ export default function ProductDetails({ productId }: ProductDetailsProps) {
 
   const product = useAppSelector(selectProduct(productId));
 
-  if (!product) return;
+  if (!product)
+    return (
+      <div className="mt-8">
+        <LoadingSpinner />
+      </div>
+    );
 
   return (
     <div className="container mx-auto pt-12">
       <Button href="/products" className="mb-4">
         Go to products list
       </Button>
-      <div className=" flex gap-10 text-white">
+      <div className="flex gap-10 text-white flex-col md:flex-row">
         <ProductImage
-          wrapperClassname="w-[500px] h-[700px]"
+          wrapperClassname="max-w-[400px] w-full h-[300px] md:h-[500px] xl:w-[500px] xl:h-[700px]"
           statusClassname="text-3xl"
           src={product.imageSrc}
           alt={product.name}

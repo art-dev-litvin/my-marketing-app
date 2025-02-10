@@ -15,7 +15,7 @@ export default function SearchProductForm() {
     if (searchByName) {
       setSearchInputValue(searchByName);
     }
-  }, []);
+  }, [searchParams]);
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInputValue(e.target.value);
@@ -43,7 +43,7 @@ export default function SearchProductForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className=" flex gap-2 h-[50px] mb-4">
+    <form onSubmit={handleSubmit} className=" flex gap-2  mb-8 flex-col h-auto md:!h-[50px] md:flex-row">
       <Input
         value={searchInputValue}
         onChange={onInputChange}
@@ -51,10 +51,12 @@ export default function SearchProductForm() {
         type="text"
         placeholder="Search for a product"
       />
-      <Button type="submit">Search</Button>
-      <Button className="bg-transparent text-white border-2 border-white" onClick={handleClear}>
-        Clear
-      </Button>
+      <div className="flex gap-2">
+        <Button type="submit">Search</Button>
+        <Button className="!bg-transparent text-white border-2 border-white" onClick={handleClear}>
+          Clear
+        </Button>
+      </div>
     </form>
   );
 }

@@ -13,7 +13,7 @@ export default function ProductItem({ product }: ProductItemProps) {
     <div className="flex flex-col items-start rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
       <div className="w-full relative mb-3">
         <ProductImage
-          wrapperClassname="w-full h-[420px]"
+          wrapperClassname="w-full h-[300px] lg:h-[420px]"
           statusClassname="text-xl"
           src={product.imageSrc}
           alt={product.name}

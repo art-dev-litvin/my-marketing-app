@@ -11,7 +11,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-6xl font-bold mb-6">
+          className="text-xl font-bold mb-6 sm:text-2xl lg:text-5xl">
           Welcome to Our Product Showcase
         </motion.h1>
         <motion.div

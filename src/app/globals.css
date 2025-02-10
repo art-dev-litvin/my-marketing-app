@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-poppins min-h-screen bg-black-900 text-white;
+  @apply font-poppins min-h-screen bg-black-900 text-white px-3;
 }
