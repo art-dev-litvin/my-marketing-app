@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { fetchProducts } from "@app/services/fetchProducts";
-import { useAppDispatch } from "@app/hooks/redux";
-import { setError, setLoading, setProducts } from "@app/store/slices/products";
+import { useAppDispatch, useAppSelector } from "@app/hooks/redux";
+import { selectProducts, setError, setLoading, setProducts } from "@app/store/slices/products";
 
 export const useFetchProducts = () => {
   const dispatch = useAppDispatch();
+  const { items } = useAppSelector(selectProducts);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -19,6 +20,8 @@ export const useFetchProducts = () => {
       }
     };
 
-    getProducts();
-  }, [dispatch]);
+    if (items.length === 0) {
+      getProducts();
+    }
+  }, [dispatch, items]);
 };
