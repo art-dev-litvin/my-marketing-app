@@ -1,5 +1,5 @@
 import ProductDetails from "@app/components/ProductDetails";
-import Link from "next/link";
+import { notFound } from "next/navigation";
 import React from "react";
 
 interface ProductPageProps {
@@ -11,16 +11,7 @@ interface ProductPageProps {
 export default async function ProductDetailsPage({ params }: ProductPageProps) {
   const productId = Number((await params).productId);
 
-  if (isNaN(productId)) {
-    return (
-      <div className="h-screen flex flex-col justify-center items-center">
-        <p className="text-3xl mb-3">Product not found!</p>
-        <Link className="hover:underline" href="/products">
-          Go to products list
-        </Link>
-      </div>
-    );
-  }
+  if (isNaN(productId)) return notFound();
 
   return <ProductDetails productId={productId} />;
 }
