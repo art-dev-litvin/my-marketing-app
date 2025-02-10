@@ -1,4 +1,5 @@
 import { ProductList } from "@app/types/product";
+import { ProductStatus, UnitEnum } from "@app/types/productFields";
 
 export const products: ProductList = [
   {
@@ -9,8 +10,8 @@ export const products: ProductList = [
     ingredients: ["Water", "Organic Almonds", "Sea Salt"],
     price: 45.99,
     discountPrice: 40.99,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Beverages",
   },
   {
@@ -21,8 +22,8 @@ export const products: ProductList = [
     ingredients: ["Whole Wheat Flour", "Water", "Yeast", "Salt"],
     price: 25.5,
     discountPrice: 23.5,
-    status: "Out of Stock",
-    unitType: "per unit",
+    status: ProductStatus.OutOfStack,
+    unitType: UnitEnum.Unit,
     category: "Bakery",
   },
   {
@@ -31,8 +32,8 @@ export const products: ProductList = [
     name: "Cherry Tomatoes",
     description: "Fresh and juicy cherry tomatoes grown locally.",
     price: 30.0,
-    status: "In Stock",
-    unitType: "per 100g",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.HundredGrams,
     category: "Vegetables",
   },
   {
@@ -43,8 +44,8 @@ export const products: ProductList = [
     ingredients: ["Pasteurized Milk", "Live Cultures"],
     price: 50.0,
     discountPrice: 45.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Dairy",
   },
   {
@@ -53,8 +54,8 @@ export const products: ProductList = [
     name: "Extra Virgin Olive Oil (500ml)",
     description: "Cold-pressed olive oil for salads and cooking.",
     price: 120.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Oils",
   },
   {
@@ -64,8 +65,8 @@ export const products: ProductList = [
     description: "Rich and intense dark chocolate with 70% cocoa.",
     ingredients: ["Cocoa Mass", "Cocoa Butter", "Sugar"],
     price: 75.0,
-    status: "Out of Stock",
-    unitType: "per unit",
+    status: ProductStatus.OutOfStack,
+    unitType: UnitEnum.Unit,
     category: "Confectionery",
   },
   {
@@ -75,8 +76,8 @@ export const products: ProductList = [
     description: "Quick-cooking whole grain oats for breakfast.",
     ingredients: ["Rolled Oats"],
     price: 35.0,
-    status: "In Stock",
-    unitType: "per 100g",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.HundredGrams,
     category: "Grains",
   },
   {
@@ -85,8 +86,8 @@ export const products: ProductList = [
     name: "Boneless Chicken Breast",
     description: "Fresh, hormone-free chicken breast.",
     price: 180.0,
-    status: "Out of Stock",
-    unitType: "per 100g",
+    status: ProductStatus.OutOfStack,
+    unitType: UnitEnum.HundredGrams,
     category: "Meat",
   },
   {
@@ -96,8 +97,8 @@ export const products: ProductList = [
     description: "Freshly squeezed orange juice with no added sugar.",
     price: 85.0,
     discountPrice: 80.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Beverages",
   },
   {
@@ -106,8 +107,8 @@ export const products: ProductList = [
     name: "Cauliflower",
     description: "Fresh organic cauliflower grown sustainably.",
     price: 40.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Vegetables",
   },
   {
@@ -116,8 +117,8 @@ export const products: ProductList = [
     name: "Frozen Mixed Berries",
     description: "A mix of blueberries, raspberries, and blackberries.",
     price: 150.0,
-    status: "In Stock",
-    unitType: "per 100g",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.HundredGrams,
     category: "Frozen Foods",
   },
   {
@@ -127,8 +128,8 @@ export const products: ProductList = [
     description: "100% raw organic honey from wildflowers.",
     price: 200.0,
     discountPrice: 190.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Sweeteners",
   },
   {
@@ -137,8 +138,8 @@ export const products: ProductList = [
     name: "Brown Rice",
     description: "Nutritious and fiber-rich brown rice.",
     price: 90.0,
-    status: "In Stock",
-    unitType: "per 100g",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.HundredGrams,
     category: "Grains",
   },
   {
@@ -147,8 +148,8 @@ export const products: ProductList = [
     name: "Parmesan Cheese",
     description: "Aged Italian Parmesan cheese.",
     price: 250.0,
-    status: "Out of Stock",
-    unitType: "per unit",
+    status: ProductStatus.OutOfStack,
+    unitType: UnitEnum.Unit,
     category: "Dairy",
   },
   {
@@ -157,8 +158,8 @@ export const products: ProductList = [
     name: "Carrots",
     description: "Fresh, crunchy carrots perfect for snacks and salads.",
     price: 25.0,
-    status: "In Stock",
-    unitType: "per 100g",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.HundredGrams,
     category: "Vegetables",
   },
   {
@@ -167,8 +168,8 @@ export const products: ProductList = [
     name: "Apple Cider Vinegar",
     description: "Raw, unfiltered apple cider vinegar with the 'Mother'.",
     price: 140.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Condiments",
   },
   {
@@ -178,8 +179,8 @@ export const products: ProductList = [
     description: "Premium canned tuna in olive oil.",
     ingredients: ["Tuna", "Olive Oil", "Salt"],
     price: 110.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Seafood",
   },
   {
@@ -189,8 +190,8 @@ export const products: ProductList = [
     description: "Natural peanut butter with no added sugar.",
     ingredients: ["Roasted Peanuts"],
     price: 180.0,
-    status: "Out of Stock",
-    unitType: "per unit",
+    status: ProductStatus.OutOfStack,
+    unitType: UnitEnum.Unit,
     category: "Spreads",
   },
   {
@@ -199,8 +200,8 @@ export const products: ProductList = [
     name: "Chia Seeds",
     description: "Rich in omega-3 and fiber, perfect for smoothies.",
     price: 140.0,
-    status: "In Stock",
-    unitType: "per 100g",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.HundredGrams,
     category: "Superfoods",
   },
   {
@@ -209,8 +210,8 @@ export const products: ProductList = [
     name: "Sparkling Water",
     description: "Refreshing sparkling water with no additives.",
     price: 45.0,
-    status: "In Stock",
-    unitType: "per unit",
+    status: ProductStatus.InStock,
+    unitType: UnitEnum.Unit,
     category: "Beverages",
   },
 ];

@@ -1,5 +1,11 @@
-export type ProductStatus = "In Stock" | "Out of Stock";
-export type UnitType = "per unit" | "per 100g";
+export enum ProductStatus {
+  InStock = "In Stock",
+  OutOfStack = "Out of Stock",
+}
+export enum UnitEnum {
+  Unit = "unit",
+  HundredGrams = "100g",
+}
 export type ProductCategory =
   | "Beverages"
   | "Bakery"
