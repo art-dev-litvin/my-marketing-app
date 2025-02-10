@@ -2,9 +2,9 @@ import EditProductForm from "@app/components/EditProductForm";
 import { notFound } from "next/navigation";
 
 interface EditProductPageProps {
-  params: {
+  params: Promise<{
     productId: string;
-  };
+  }>;
 }
 
 export default async function EditProductPage({ params }: EditProductPageProps) {

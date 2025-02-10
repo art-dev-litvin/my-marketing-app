@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     productId: string;
-  };
+  }>;
 }
 
 export default async function ProductDetailsPage({ params }: ProductPageProps) {

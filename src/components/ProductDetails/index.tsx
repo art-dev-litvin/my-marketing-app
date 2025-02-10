@@ -32,7 +32,7 @@ export default function ProductDetails({ productId }: ProductDetailsProps) {
       </Button>
       <div className="flex gap-10 text-white flex-col md:flex-row">
         <ProductImage
-          wrapperClassname="max-w-[400px] w-full h-[300px] md:h-[500px] xl:w-[500px] xl:h-[700px]"
+          wrapperClassname="max-w-[400px] w-full h-[300px] md:h-[500px] max-w-[500px] lg:h-[700px]"
           statusClassname="text-3xl"
           src={product.imageSrc}
           alt={product.name}

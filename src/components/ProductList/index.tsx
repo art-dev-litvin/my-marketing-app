@@ -8,11 +8,11 @@ import EmptyList from "./EmptyList";
 import LoadingSpinner from "../LoadingSpinner";
 
 const ProductList = () => {
+  const searchParams = useSearchParams();
   useFetchProducts();
 
   const { items, loading, error } = useAppSelector(selectProducts);
 
-  const searchParams = useSearchParams();
   const searchByName = searchParams.get("searchByName")?.toLowerCase() || "";
 
   const filteredItems = items.filter((product) => product.name.toLowerCase().includes(searchByName));
