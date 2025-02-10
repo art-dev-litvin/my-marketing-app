@@ -11,4 +11,7 @@ export type ProductCategory =
   | "Condiments"
   | "Seafood"
   | "Spreads"
-  | "Superfoods";
+  | "Superfoods"
+  | "Oils"
+  | "Confectionery"
+  | "Meat";

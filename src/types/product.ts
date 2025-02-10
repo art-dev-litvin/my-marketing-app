@@ -2,6 +2,7 @@ import { ProductCategory, ProductStatus, UnitType } from "./productFields";
 
 export interface Product {
   id: number;
+  imageSrc: string;
   name: string;
   description: string;
   ingredients?: string[];

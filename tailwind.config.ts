@@ -12,8 +12,7 @@ export default {
         poppins: ["var(--font-poppins)"],
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "black-900": "#1a1a1a",
       },
     },
   },
