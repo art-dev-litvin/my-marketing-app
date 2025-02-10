@@ -1,7 +1,7 @@
 "use client";
 
+import Button from "@app/components/Button";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -18,11 +18,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}>
-          <Link href="/products">
-            <button className="px-6 py-3 bg-white text-black rounded-xl transition-transform hover:scale-105">
-              Explore Products
-            </button>
-          </Link>
+          <Button href="/products">Explore Products</Button>
         </motion.div>
       </div>
     </div>
